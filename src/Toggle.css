@@ -1,0 +1,55 @@
+
+  
+  #light {
+    background-color: #f3ebf6;
+  }
+  
+  #dark {
+    background-color: #c5b6ca;
+  }
+
+  #light .main {
+    background-color: #fff;
+  }
+  
+
+  #light .sign {
+    color: #d8d2da;
+  }
+  
+  #dark .sign {
+    color: #ffffff;
+  }
+  .switch {
+   
+    width: 100px;
+    /* height: 100px;  */
+    /* justify-content: center;
+    /* align-items: center; */
+  
+  }
+  
+  .switch label {
+    margin: 5px;
+  }
+  
+  #light .switch label {
+    color: black;
+  }
+  
+  #dark .switch label {
+    color: white;
+  }  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    } */
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9;
+    } 
+}
+
