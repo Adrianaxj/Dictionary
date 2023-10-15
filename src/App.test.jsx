@@ -26,4 +26,27 @@ describe('Check search', () => {
     expect(await screen.findByText("Sorry pal, we couldn't find definitions for the word you were looking for.")).toBeInTheDocument();
   });
 
+  it("Should display API result when asking the API", async () => {
+    user.setup();
+    render(<App />);
+
+    const input = screen.getByPlaceholderText('Search...');
+    const searchBtn = screen.getByRole("button");
+    await user.type(input, 'hello');
+    await user.click(searchBtn);
+
+    expect(await screen.findByText('word hello')).toBeInTheDocument();
+  });
+
+  it("Should deliver 3 sound files when searching for hello", async () => {
+    render(<App />);
+
+    const input = screen.getByPlaceholderText('Search...');
+    const searchBtn = screen.getByRole("button");
+    await user.type(input, 'hello');
+    await user.click(searchBtn);
+    
+    expect(await (screen.findAllByTestId("audio"))).toHaveLength(3)
+  });
+
 });

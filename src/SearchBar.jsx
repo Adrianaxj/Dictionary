@@ -59,7 +59,7 @@ function SearchBar () {
                       <span>Text {p.text}</span><br />
                       <div>
                         {p.audio != null ?
-                        (<audio controls>
+                        (<audio controls data-testid="audio" >
                           <source src={p.audio} type="audio/mp3" />
                         </audio>)
                         : ''}
